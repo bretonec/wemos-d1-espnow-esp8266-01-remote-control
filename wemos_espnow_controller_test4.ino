@@ -20,9 +20,6 @@ const int8_t CLK_PIN = D5;  // Uncomment for Software SPI
 // Enter the MAC address of the first slave device
 uint8_t broadcastAddress1[] = {0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX};
 
-// Enter the MAC address of the second slave device
-uint8_t broadcastAddress2[] = {0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX};
-
 Adafruit_PCD8544 display = Adafruit_PCD8544(DC_PIN, CE_PIN, RST_PIN);
 
 const uint8_t KEYPAD_ADDRESS = 0x21; //adresa i2c
@@ -73,7 +70,7 @@ void setup() {
   esp_now_register_send_cb(OnDataSent);
 
   esp_now_add_peer(broadcastAddress1, ESP_NOW_ROLE_SLAVE, 1, NULL, 0);
-  esp_now_add_peer(broadcastAddress2, ESP_NOW_ROLE_SLAVE, 1, NULL, 0);
+ 
 
   if (keyPad.begin() == false)
   {
@@ -148,7 +145,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (chr == 54) {
@@ -159,7 +156,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (chr == 55) {
@@ -170,7 +167,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (chr == 56) {
@@ -181,7 +178,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (chr == 57) {
@@ -192,7 +189,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (chr == 48) {
@@ -203,7 +200,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (chr == 65) {
@@ -214,7 +211,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (chr == 66) {
@@ -225,7 +222,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (chr == 67) {
@@ -236,7 +233,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (chr == 68) {
@@ -247,7 +244,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (chr == 35) {
@@ -258,7 +255,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (chr == 42) {
@@ -269,7 +266,7 @@ void loop() {
       display.setCursor(0,1);
       display.println(dataToSend);
       display.display();
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
   }
