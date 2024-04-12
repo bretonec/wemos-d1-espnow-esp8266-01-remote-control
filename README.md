@@ -4,7 +4,8 @@ Controllers for raspberry pi mpd music server. Ideal for control of raspberry pi
 This project was possible because of cifertech, random nerd, guy with the swiss accent, edgemicrotech and other great people from our great online diy community. Thank you. We don't know each other, but our work is connecting us. 
 
 What we will nead:
-- raspberry pi with mpd server and node-red installed
+- raspberry pi with rpitx, mpd server and node-red installed
+- antenna on pin 04 of rapsi
 - wemos d1
 - esp8266-02 2x
 - usb serial programmer 2x
