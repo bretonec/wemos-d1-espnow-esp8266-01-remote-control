@@ -14,4 +14,4 @@ What we will nead:
 - battery holder
 - arduino sensor shield
 
-Easies way is to use first usb serial adapter with esp8266-01 in usb port of raspi and second in usb port of android phone. I like android app - USB Serial Monitor made by Keuwlsoft. But wemos remote is also good. 
+Easiest way is to put first usb serial adapter with esp8266-01 in usb port of raspi and second in usb port of android phone. I like android app named USB Serial Monitor made by Keuwlsoft. But wemos remote is also good. 
