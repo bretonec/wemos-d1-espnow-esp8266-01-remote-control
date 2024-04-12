@@ -2,12 +2,9 @@
 #include <espnow.h>
 
 char serialin;
-// Enter the MAC address of the first slave device
+// Enter the MAC address of the first slave device For more devices you can make second mac adress instance, but you must in code specify 
 uint8_t broadcastAddress1[] = {0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX};
-
-// Enter the MAC address of the second slave device
-uint8_t broadcastAddress2[] = {0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX};
-
+// uint8_t broadcastAddress2[] = {0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX};
 
 void OnDataSent(uint8_t *mac_addr, uint8_t espStatus) {
   char macStr[18];
@@ -30,8 +27,7 @@ void setup() {
   esp_now_register_send_cb(OnDataSent);
   
   esp_now_add_peer(broadcastAddress1, ESP_NOW_ROLE_SLAVE, 1, NULL, 0);
-  esp_now_add_peer(broadcastAddress2, ESP_NOW_ROLE_SLAVE, 1, NULL, 0);
-
+ 
 }
 
 void loop() {
@@ -39,7 +35,6 @@ void loop() {
   while (Serial.available() > 0) {
     //Read Serial data and alocate on serialin
     serialin = Serial.read();
-    //If serialin is equal as 'l' or 'L' LAMP OFF
     if (serialin == 'a' || serialin =='A'){ // Two Pipeines(||) to make a boolean OR Comparission
       Serial.println(serialin);
       uint8_t dataToSend = 1;
@@ -47,9 +42,9 @@ void loop() {
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
       esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
+      //esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
-    /*serialin is equal as 'a' or ´A´ */
     else if (serialin == 'b' || serialin =='B'){ // Two Pipeines(||) to make a boolean OR Comparission
       Serial.println(serialin);
       uint8_t dataToSend = 2;
@@ -81,7 +76,7 @@ void loop() {
       uint8_t dataToSend = 1;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
   }
   else if (serialin == 'f' || serialin =='F'){ // Two Pipeines(||) to make a boolean OR Comparission
@@ -89,7 +84,7 @@ void loop() {
       uint8_t dataToSend = 2;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
   }
   else if (serialin == 'g' || serialin =='G'){ // Two Pipeines(||) to make a boolean OR Comparission
@@ -97,7 +92,7 @@ void loop() {
       uint8_t dataToSend = 1;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
   }
   else if (serialin == 'h' || serialin =='H'){ // Two Pipeines(||) to make a boolean OR Comparission
@@ -105,7 +100,7 @@ void loop() {
       uint8_t dataToSend = 1;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
   }
    else if (serialin == 'i' || serialin =='I'){ // Two Pipeines(||) to make a boolean OR Comparission
@@ -113,7 +108,7 @@ void loop() {
       uint8_t dataToSend = 5;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
   }
   else if (serialin == 'j' || serialin =='J'){ // Two Pipeines(||) to make a boolean OR Comparission
@@ -121,7 +116,7 @@ void loop() {
       uint8_t dataToSend = 6;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (serialin == 'k' || serialin =='K'){ // Two Pipeines(||) to make a boolean OR Comparission
@@ -130,7 +125,7 @@ void loop() {
       //mySerial.println("1");
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     /*serialin is equal as 'c' or C */
@@ -139,7 +134,7 @@ void loop() {
       uint8_t dataToSend = 8;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     /*serialin is equal as 'c' or C */
@@ -148,7 +143,7 @@ void loop() {
       uint8_t dataToSend = 9;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     /*serialin is equal as 'c' or C */
@@ -157,7 +152,7 @@ void loop() {
       uint8_t dataToSend = 10;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (serialin == 'o' || serialin =='O'){ // Two Pipeines(||) to make a boolean OR Comparission
@@ -166,7 +161,7 @@ void loop() {
       //mySerial.println("1");
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     /*serialin is equal as 'c' or C */
@@ -175,7 +170,7 @@ void loop() {
       uint8_t dataToSend = 12;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     /*serialin is equal as 'c' or C */
@@ -184,7 +179,7 @@ void loop() {
       uint8_t dataToSend = 13;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
     else if (serialin == 'r' || serialin =='R'){ // Two Pipeines(||) to make a boolean OR Comparission
@@ -192,7 +187,7 @@ void loop() {
       uint8_t dataToSend = 14;
       Serial.print("Data Sent:");
       Serial.println(dataToSend);
-      esp_now_send(broadcastAddress2, &dataToSend, sizeof(dataToSend));
+      esp_now_send(broadcastAddress1, &dataToSend, sizeof(dataToSend));
       delay(110);
     }
   }
