@@ -13,3 +13,5 @@ What we will nead:
 - 2x 18650 batteries
 - battery holder
 - arduino sensor shield
+
+Easies way is to use first usb serial adapter with esp8266-02 in usb port of raspi and second in usb port of android phone. I like android app - USB Serial Monitor made by Keuwlsoft. But wemos remote is also fine. 
