@@ -1,5 +1,5 @@
 # wemos-d1-espnow-esp8266-01-remote-control
-Controllers for raspberry pi mpd music server. Ideal for control of raspberry pi fm transmitter on larger garden party.  pifmds takes audio from internal raspi mpd stream on port 8000 throught sox, which also makes low pass filter for this transmittion.  Pi2 is good compromise. Second had pi2 is not expensive and has enought horse power to run whole project. Node-red is bit ram hungry, but 1gb of ram will be enouht. 
+Controllers for raspberry pi mpd music server. Ideal for control of raspberry pi fm transmitter on larger garden party.  pifmds takes audio from internal raspi mpd stream on port 8000 throught sox, which also makes low pass filter for this transmittion.  Pi2 is good compromise. Second hand pi2 is not expensive and has enought horse power to run whole project. Node-red is bit ram hungry, but 1gb of ram will be enouht. 
 
 This project was possible because of Christophe Jacquet (PiFmRds) , authors of rpitx, cifertech, random nerd, guy with the swiss accent, edgemicrotech and other great people from our great online diy community. Thank you. We don't know each other, but our work is connecting us. 
 
