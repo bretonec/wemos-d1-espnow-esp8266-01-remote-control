@@ -16,4 +16,6 @@ What we will nead:
 - battery holder
 - arduino sensor shield
 
-Disable 1-wire in raspi-config, it is in conflicts with rpitx. Otherwise, it is not possible to transmit smoothly. Easiest way is to put first usb serial adapter with esp8266-01 in usb port of raspi and second in usb port of android phone. I like android app named USB Serial Monitor made by Keuwlsoft. But wemos remote is also good. Successfully tested at a distance of approx. 50 m through wall. I plan to test the system in outdoor conditions with a direct line of sight as soon as the weather improves a bit.
+Disable 1-wire in raspi-config, it is in conflicts with rpitx. Otherwise, it is not possible to transmit smoothly. 
+
+Easiest way is to put first usb serial adapter with esp8266-01 in usb port of raspi and second in usb port of android phone. I like android app named USB Serial Monitor made by Keuwlsoft. But wemos remote is also good. Successfully tested at a distance of approx. 50 m through wall. I plan to test the system in outdoor conditions with a direct line of sight as soon as the weather improves a bit.
