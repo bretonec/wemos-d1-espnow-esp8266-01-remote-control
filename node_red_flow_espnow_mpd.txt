@@ -315,7 +315,7 @@
         "id": "e51d08507bbbaa79",
         "type": "exec",
         "z": "4fc3a185fe96f537",
-        "command": " sox -v 1.5 -t mp3 http://192.168.4.127:8000/ -t wav --input-buffer 80000 -r44100 -c2 - compand 0.01,1 -90,-90,-70,-70,-60,-20,0,0 0 | sudo /home/pi/install/rpitx/pifmrds -freq 97.5 -audio -",
+        "command": " sox -v 1.5 -t mp3 http://192.168.4.127:8000/ -t wav --input-buffer 80000 -r44100 -c2 - compand 0.01,1 -90,-90,-70,-70,-60,-20,0,0 0 | sudo /home/pi/install/rpitx/pifmrds -freq 102.3 -audio -",
         "addpay": false,
         "append": "",
         "useSpawn": "false",
