@@ -6,7 +6,7 @@ This project was possible because of Christophe Jacquet (PiFmRds) , authors of r
 What we will nead:
 - raspberry pi with rpitx, mpd server and node-red installed
 - antenna on pin 04 of rapsi
-- wemos d1
+- wemos d1 (3,3V device)
 - esp8266-02 2x
 - usb serial programmer 2x
 - nokia 5110 (3,3V)
