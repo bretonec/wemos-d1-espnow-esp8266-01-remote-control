@@ -15,6 +15,7 @@ What we will nead:
 - 2x 18650 batteries
 - battery holder
 - arduino sensor shield - wemos is 3,3V device, don't use vcc pins on shield, these pins are 5V.
+- esp32 nat router (https://github.com/gjroots/esp32_nat_router_plus or https://github.com/dchristl/esp32_nat_router_extended)
 
 Disable 1-Wire in raspi-config, it is in conflicts with rpitx. Otherwise it is not possible to transmit smoothly.  GMake M3U format playlist from command line  https://github.com/MatteoGuadrini/mkpl Conceret instrictions you can find here: https://askubuntu.com/questions/259726/how-can-i-generate-an-m3u-playlist-http-url-format-from-the-terminal
 
