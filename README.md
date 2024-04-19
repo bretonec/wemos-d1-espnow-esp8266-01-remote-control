@@ -9,12 +9,12 @@ What we will nead:
 - wemos d1
 - esp8266-02 2x
 - usb serial programmer 2x
-- nokia 5110
+- nokia 5110 (3,3V)
 - i2c gpio expander board
 - 4x4 matrix keypad
 - 2x 18650 batteries
 - battery holder
-- arduino sensor shield
+- arduino sensor shield - wemos is 3,3V device, don't use vcc pins on shield, these pins are 5V.
 
 Disable 1-Wire in raspi-config, it is in conflicts with rpitx. Otherwise it is not possible to transmit smoothly.  GMake M3U format playlist from command line  https://github.com/MatteoGuadrini/mkpl Conceret instrictions you can find here: https://askubuntu.com/questions/259726/how-can-i-generate-an-m3u-playlist-http-url-format-from-the-terminal
 
