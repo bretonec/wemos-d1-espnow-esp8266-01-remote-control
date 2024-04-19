@@ -15,7 +15,7 @@ What we will nead:
 - 2x 18650 batteries
 - battery holder
 - arduino sensor shield - wemos is 3,3V device, don't use vcc pins on shield, these pins are 5V.
-- esp32 nat router (https://github.com/gjroots/esp32_nat_router_plus or https://github.com/dchristl/esp32_nat_router_extended) - if you plan to have a party somewhere where there is no internet access
+- esp32 nat router (https://github.com/gjroots/esp32_nat_router_plus or https://github.com/dchristl/esp32_nat_router_extended) - if you plan to have a party somewhere where there is no internet access. Its range is limited. It certainly won't cover the entire (large) garden.
 - large usb flash drive with music (https://raspberrytips.com/mount-usb-drive-raspberry-pi/ - symlink in mpd music diretory referring to files on the flash drive is necessary to load this music files into the mpd database)
 - portable fm radios
 
