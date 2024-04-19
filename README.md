@@ -16,7 +16,7 @@ What we will nead:
 - battery holder
 - arduino sensor shield - wemos is 3,3V device, don't use vcc pins on shield, these pins are 5V.
 - esp32 nat router (https://github.com/gjroots/esp32_nat_router_plus or https://github.com/dchristl/esp32_nat_router_extended) - if you plan to have a party somewhere where there is no internet access
-- large usb flash drive with music (https://raspberrytips.com/mount-usb-drive-raspberry-pi/)
+- large usb flash drive with music (https://raspberrytips.com/mount-usb-drive-raspberry-pi/ symlink in mpd music diretory referring to files on the flash drive is necessary to load this music files into the mpd database)
 - portable fm radios
 
 Disable 1-Wire in raspi-config, it is in conflicts with rpitx. Otherwise it is not possible to transmit smoothly.  GMake M3U format playlist from command line  https://github.com/MatteoGuadrini/mkpl Conceret instructions you can find here: https://askubuntu.com/questions/259726/how-can-i-generate-an-m3u-playlist-http-url-format-from-the-terminal
