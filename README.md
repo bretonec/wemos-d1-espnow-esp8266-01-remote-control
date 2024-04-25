@@ -9,7 +9,7 @@ What we will nead:
 - wemos d1 (3,3V device)
 - esp8266-02 2x
 - usb serial programmer 2x
-- nokia 5110 (3,3V)
+- nokia 5110 display (3,3V)
 - i2c gpio expander board (Alternatively you can use one pin setup and connect the keypad to pin A0 through voltage divider circuit, which divides the voltage in between two different resistors. But you have to choose the resistor values with respect to the 3.3V logic. I have not tested this option yet.) 
 - 4x4 matrix keypad
 - 2x 18650 batteries
