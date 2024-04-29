@@ -23,3 +23,5 @@ Disable 1-Wire in raspi-config, it is in conflicts with rpitx. Otherwise it is n
 
 Easiest way is to put first usb serial adapter with esp8266-01 in usb port of raspi and second in usb port of android phone. I like android app named USB Serial Monitor made by Keuwlsoft. But wemos remote is also good, at least if you're not sober (but this is not an notorial). The worst problem was finding a suitable library for the i2c keypad. Successfully tested at a distance of approx. 50m through wall and roughly 100m when the esp8266-01 was in the window. My plan is to test this system in outdoor conditions with a direct line of sight as soon as the weather improves a bit.
 
+Get ESP32/ESP8266 MAC Address and Change It (Arduino IDE): https://randomnerdtutorials.com/get-change-esp32-esp8266-mac-address-arduino/
+
