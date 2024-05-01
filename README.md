@@ -21,7 +21,7 @@ What we will nead:
 
 Disable 1-Wire in raspi-config, it is in conflicts with rpitx. Otherwise it is not possible to transmit smoothly.  GMake M3U format playlist from command line  https://github.com/MatteoGuadrini/mkpl Conceret instructions you can find here: https://askubuntu.com/questions/259726/how-can-i-generate-an-m3u-playlist-http-url-format-from-the-terminal
 
-Easiest way is to put first usb serial adapter with esp8266-01 in usb port of raspi and second in usb port of android phone. I like android app named USB Serial Monitor made by Keuwlsoft. But wemos remote is also good, at least if you're not sober (but this is not an notorial). The worst problem was finding a suitable library for the i2c keypad. Successfully tested at a distance of approx. 50m through wall and  110m in out door conditions. The range will certainly be at a longer distance, but I'm on my own, so I can't test it better.
+Easiest way is to put first usb serial adapter with esp8266-01 in usb port of raspi and second in usb port of android phone. I like android app named USB Serial Monitor made by Keuwlsoft. But wemos remote is also good, at least if you're not sober (but this is not an notorial). The worst problem was finding a suitable library for the i2c keypad. Successfully tested at a distance of approx. 50m through wall and  110m in out door conditions /tested in public park/. The range will certainly be at a longer distance, but I'm on my own, so I can't test it better.
 
 Get ESP32/ESP8266 MAC Address and Change It (Arduino IDE): https://randomnerdtutorials.com/get-change-esp32-esp8266-mac-address-arduino/
 
