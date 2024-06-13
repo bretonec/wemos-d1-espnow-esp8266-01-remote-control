@@ -25,5 +25,5 @@ Easiest way is to put first usb serial adapter with esp8266-01 in usb port of ra
 
 Get ESP32/ESP8266 MAC Address and Change It (Arduino IDE): https://randomnerdtutorials.com/get-change-esp32-esp8266-mac-address-arduino/
 
-Alternatively you can use this command in exec node in node-red: sox -t mp3 http://192.168.2.4:8000/mp3  -t wav --input-buffer 80000 -c 2 - firfit /home/pi/75usPreEmphasis.ff |  sudo /home/pi/install/rpitx/pifmrds -freq 106.6 -audio -    (75usPreEmphasis.ff you will find among files in repository. It can improve transmitted audio a lot, if you take time to refine it. This one is very good, but not exellent.) 
+Alternatively you can use this command in exec node in node-red: sox -t mp3 http://192.168.2.4:8000/mp3  -t wav --input-buffer 80000 -c 2 - firfit /home/pi/75usPreEmphasis.ff |  sudo /home/pi/install/rpitx/pifmrds -freq 106.6 -audio -    (Buffer will helps suppress lags and choppy audio. 75usPreEmphasis.ff you will find among files in repository. It can improve transmitted audio a lot, if you take time to refine it. This one is very good, but not exellent.) 
 
